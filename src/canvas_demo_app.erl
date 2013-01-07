@@ -7,6 +7,7 @@
 -behaviour(application).
 
 -export([start/2, stop/1]).
+-export([config_change/3]).
 
 -include_lib("nitrogen_core/include/wf.hrl").
 
@@ -23,4 +24,7 @@ stop(_) ->
     ok.
 
 
-
+config_change(Changed, New, Removed) ->
+    io:format("config changed: changed=~p, new=~p, removed=~p\n", 
+	      [Changed,New,Removed]),
+    ok.

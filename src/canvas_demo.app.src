@@ -7,6 +7,7 @@
  [
   {description,  "Demonstration of nitrogen HTML canvas"},
   {vsn, git},
+  {mod, { canvas_demo_app, []} },
   %% configuration parameters similar to those in the config
   %% file specified on the command line
   {env, [{http_server, inets},  % yaws | inets | mochiweb
